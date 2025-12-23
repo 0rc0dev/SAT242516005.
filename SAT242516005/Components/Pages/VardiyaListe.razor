@@ -1,0 +1,33 @@
+﻿@page "/vardiyaliste"
+@inject IProvider Provider
+
+<h3>Vardiya Listesi</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tarih</th>
+            <th>Doktor</th>
+            <th>Hasta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var v in Vardiyalar)
+        {
+            <tr>
+                <td>@v.Tarih.ToShortDateString()</td>
+                <td>@v.Doktor.Ad @v.Doktor.Soyad</td>
+                <td>@v.Hasta.Ad @v.Hasta.Soyad</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<SAT242516005.Models.Vardiya> Vardiyalar = new();
+
+    protected override void OnInitialized()
+    {
+        Vardiyalar = Provider.AllVardiyalar;
+    }
+}

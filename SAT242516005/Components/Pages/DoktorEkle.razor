@@ -1,0 +1,43 @@
+﻿@page "/doktor-ekle"
+@using SAT242516005.Models
+@inject MyDbContext db
+@inject NavigationManager NavigationManager
+
+<h3>Yeni Doktor</h3>
+
+<EditForm Model="doktor" OnValidSubmit="AddDoktor">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Ad</label>
+        <InputText class="form-control" @bind-Value="doktor.Ad" />
+    </div>
+
+    <div class="mb-3">
+        <label>Soyad</label>
+        <InputText class="form-control" @bind-Value="doktor.Soyad" />
+    </div>
+
+    <div class="mb-3">
+        <label>Branş</label>
+        <InputText class="form-control" @bind-Value="doktor.Brans" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <button type="button" class="btn btn-secondary" @onclick="() => Cancel()">İptal</button>
+
+</EditForm>
+
+@code {
+    private Doktor doktor = new();
+
+    private void AddDoktor()
+    {
+        db.Doktorlar.Add(doktor);
+        db.SaveChanges();
+        NavigationManager.NavigateTo("/doktorlar");
+    }
+
+    private void Cancel() => NavigationManager.NavigateTo("/doktorlar");
+}

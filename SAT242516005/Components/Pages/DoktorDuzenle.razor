@@ -1,0 +1,53 @@
+﻿@page "/doktor-duzenle/{Id:int}"
+@using SAT242516005.Models
+@inject MyDbContext db
+@inject NavigationManager NavigationManager
+
+<h3>Doktor Düzenle</h3>
+
+@if (doktor == null)
+{
+    <p>Yükleniyor...</p>
+}
+else
+{
+    <EditForm Model="doktor" OnValidSubmit="UpdateDoktor">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label>Ad</label>
+            <InputText class="form-control" @bind-Value="doktor.Ad" />
+        </div>
+
+        <div class="mb-3">
+            <label>Soyad</label>
+            <InputText class="form-control" @bind-Value="doktor.Soyad" />
+        </div>
+
+        <div class="mb-3">
+            <label>Branş</label>
+            <InputText class="form-control" @bind-Value="doktor.Brans" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <button type="button" class="btn btn-secondary" @onclick="() => Cancel()">İptal</button>
+
+    </EditForm>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Doktor doktor;
+
+    protected override void OnInitialized() => doktor = db.Doktorlar.Find(Id);
+
+    private void UpdateDoktor()
+    {
+        db.Doktorlar.Update(doktor);
+        db.SaveChanges();
+        NavigationManager.NavigateTo("/doktorlar");
+    }
+
+    private void Cancel() => NavigationManager.NavigateTo("/doktorlar");
+}

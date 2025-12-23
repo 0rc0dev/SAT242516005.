@@ -1,0 +1,69 @@
+﻿@page "/vardiya-ekle"
+@using SAT242516005.Models
+@using SAT242516005.Data
+@inject MyDbContext db
+@inject NavigationManager NavigationManager
+
+<h3>Yeni Vardiya Ekle</h3>
+
+<EditForm Model="vardiya" OnValidSubmit="AddVardiya">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Doktor</label>
+        <select class="form-select" @bind="vardiya.DoktorId">
+            <option value="">Seçiniz</option>
+            @foreach (var d in db.Doktorlar.ToList())
+            {
+                <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Hasta</label>
+        <select class="form-select" @bind="vardiya.HastaId">
+            <option value="">Seçiniz</option>
+            @foreach (var h in db.Hastalar.ToList())
+            {
+                <option value="@h.HastaId">@h.Ad @h.Soyad</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Tarih</label>
+        <InputDate class="form-control" @bind-Value="vardiya.Tarih" />
+    </div>
+
+    <div class="mb-3">
+        <label>Başlangıç Saati</label>
+        <input type="time" class="form-control" @bind="vardiya.BaslangicSaati" />
+    </div>
+
+    <div class="mb-3">
+        <label>Bitiş Saati</label>
+        <input type="time" class="form-control" @bind="vardiya.BitisSaati" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <button type="button" class="btn btn-secondary" @onclick="() => Cancel()">İptal</button>
+
+</EditForm>
+
+@code {
+    private Vardiya vardiya = new();
+
+    private void AddVardiya()
+    {
+        db.Vardiyalar.Add(vardiya);
+        db.SaveChanges();
+        NavigationManager.NavigateTo("/vardiyalar");
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/vardiyalar");
+    }
+}

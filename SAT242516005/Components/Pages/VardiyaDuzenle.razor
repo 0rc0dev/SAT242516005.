@@ -1,0 +1,71 @@
+﻿@page "/vardiya-duzenle/{Id:int}"
+@using SAT242516005.Models
+@using SAT242516005.Data
+@inject MyDbContext db
+@inject NavigationManager NavigationManager
+
+<h3>Vardiya Düzenle</h3>
+
+@if (vardiya == null)
+{
+    <p>Yükleniyor...</p>
+}
+else
+{
+    <EditForm Model="vardiya" OnValidSubmit="UpdateVardiya">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label>Doktor</label>
+            <select class="form-select" @bind="vardiya.DoktorId">
+                <option value="">Seçiniz</option>
+                @foreach (var d in db.Doktorlar.ToList())
+                {
+                    <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
+                }
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label>Tarih</label>
+            <InputDate class="form-control" @bind-Value="vardiya.Tarih" />
+        </div>
+
+        <div class="mb-3">
+            <label>Başlangıç Saati</label>
+            <input type="time" class="form-control" @bind="vardiya.BaslangicSaati" />
+        </div>
+
+        <div class="mb-3">
+            <label>Bitiş Saati</label>
+            <input type="time" class="form-control" @bind="vardiya.BitisSaati" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <button type="button" class="btn btn-secondary" @onclick="() => Cancel()">İptal</button>
+
+    </EditForm>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Vardiya vardiya;
+
+    protected override void OnInitialized()
+    {
+        vardiya = db.Vardiyalar.Find(Id);
+    }
+
+    private void UpdateVardiya()
+    {
+        db.Vardiyalar.Update(vardiya);
+        db.SaveChanges();
+        NavigationManager.NavigateTo("/vardiyalar");
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/vardiyalar");
+    }
+}

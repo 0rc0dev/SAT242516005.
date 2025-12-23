@@ -1,0 +1,43 @@
+﻿@page "/hasta-ekle"
+@using SAT242516005.Models
+@inject MyDbContext db
+@inject NavigationManager NavigationManager
+
+<h3>Yeni Hasta</h3>
+
+<EditForm Model="hasta" OnValidSubmit="AddHasta">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Ad</label>
+        <InputText class="form-control" @bind-Value="hasta.Ad" />
+    </div>
+
+    <div class="mb-3">
+        <label>Soyad</label>
+        <InputText class="form-control" @bind-Value="hasta.Soyad" />
+    </div>
+
+    <div class="mb-3">
+        <label>Doğum Tarihi</label>
+        <InputDate class="form-control" @bind-Value="hasta.DogumTarihi" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <button type="button" class="btn btn-secondary" @onclick="() => Cancel()">İptal</button>
+
+</EditForm>
+
+@code {
+    private Hasta hasta = new();
+
+    private void AddHasta()
+    {
+        db.Hastalar.Add(hasta);
+        db.SaveChanges();
+        NavigationManager.NavigateTo("/hastalar");
+    }
+
+    private void Cancel() => NavigationManager.NavigateTo("/hastalar");
+}

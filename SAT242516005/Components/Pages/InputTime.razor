@@ -1,0 +1,35 @@
+﻿@using System.Globalization
+@typeparam TValue
+
+<InputText value="@ValueAsString"
+           @oninput="OnInputChanged"
+           type="time"
+           class="@CssClass" />
+
+@code {
+    [Parameter] public TValue Value { get; set; } = default!;
+    [Parameter] public EventCallback<TValue> ValueChanged { get; set; }
+    [Parameter] public string CssClass { get; set; } = string.Empty;
+
+    private string ValueAsString
+    {
+        get => BindConverter.FormatValue(Value, CultureInfo.InvariantCulture);
+        set
+        {
+            if (BindConverter.TryConvertTo<TValue>(value, CultureInfo.InvariantCulture, out var convertedValue))
+            {
+                Value = convertedValue;
+                _ = ValueChanged.InvokeAsync(Value);
+            }
+        }
+    }
+
+    private async Task OnInputChanged(ChangeEventArgs e)
+    {
+        if (BindConverter.TryConvertTo<TValue>(e.Value?.ToString(), CultureInfo.InvariantCulture, out var convertedValue))
+        {
+            Value = convertedValue;
+            await ValueChanged.InvokeAsync(Value);
+        }
+    }
+}

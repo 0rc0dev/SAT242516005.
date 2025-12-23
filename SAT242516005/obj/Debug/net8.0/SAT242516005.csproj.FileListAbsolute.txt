@@ -1,0 +1,14 @@
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.AssemblyReference.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfoInputs.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfo.cs
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.CoreCompileInputs.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.AssemblyReference.cache
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfoInputs.cache
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfo.cs
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.CoreCompileInputs.cache
+C:\Users\Orco\Desktop\Okul\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.MvcApplicationPartsAssemblyInfo.cache

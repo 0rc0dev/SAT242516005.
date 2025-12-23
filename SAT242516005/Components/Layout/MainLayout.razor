@@ -1,0 +1,57 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Sağlık Vardiyası Projesi</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><NavLink href="" Match="NavLinkMatch.All">Ana Sayfa</NavLink></li>
+                <li><NavLink href="vardiyaliste">Vardiya Liste</NavLink></li>
+                <li><NavLink href="vardiyaekle">Vardiya Ekle</NavLink></li>
+                <li><NavLink href="doktorliste">Doktor Liste</NavLink></li>
+                <li><NavLink href="hastaliste">Hasta Liste</NavLink></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        @Body
+    </div>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 220px;
+        background-color: #f5f5f5;
+        padding: 1rem;
+    }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+            .sidebar a.active {
+                font-weight: bold;
+            }
+
+    .main {
+        flex: 1;
+        padding: 2rem;
+    }
+</style>
