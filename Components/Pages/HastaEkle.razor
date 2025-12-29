@@ -1,0 +1,52 @@
+﻿@page "/hasta-ekle"
+@using SAT242516005.Data
+@using Microsoft.Extensions.Localization
+@using SAT242516005.Localization
+@inject ApplicationDbContext db
+@inject NavigationManager nav
+@inject IStringLocalizer<AppResource> L
+
+<div class="container mt-3">
+    @* Dil desteği için @L[...] kullandık *@
+    <h3>@L["YeniHastaKaydi"]</h3>
+
+    <EditForm Model="h" OnValidSubmit="Kaydet">
+        <DataAnnotationsValidator />
+
+        <div class="mb-3">
+            <label>@L["FirstName"]</label>
+            <InputText class="form-control" @bind-Value="h.Ad" />
+        </div>
+
+        <div class="mb-3">
+            <label>@L["LastName"]</label>
+            <InputText class="form-control" @bind-Value="h.Soyad" />
+        </div>
+
+        <div class="mb-3">
+            <label>@L["BirthDate"]</label>
+            <InputDate class="form-control" @bind-Value="h.DogumTarihi" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">@L["Save"]</button>
+        <button type="button" class="btn btn-secondary" @onclick='() => nav.NavigateTo("/hasta-liste")'>@L["Cancel"]</button>
+    </EditForm>
+</div>
+
+@code {
+    Hasta h = new();
+
+    async Task Kaydet()
+    {
+        try
+        {
+            db.Hastalar.Add(h);
+            await db.SaveChangesAsync();
+            nav.NavigateTo("/hasta-liste");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Hasta Kayıt Hatası: " + ex.Message);
+        }
+    }
+}

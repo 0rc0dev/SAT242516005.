@@ -1,0 +1,63 @@
+﻿@page "/hasta-liste"
+@using SAT242516005.Data
+@using Microsoft.Extensions.Localization
+@using SAT242516005.Localization
+@inject ApplicationDbContext db
+@inject NavigationManager nav
+@inject IStringLocalizer<AppResource> L
+
+<div class="container mt-3">
+    <h3>@L["PatientList"]</h3>
+
+    <button class="btn btn-success mb-3" @onclick='() => nav.NavigateTo("/hasta-ekle")'>
+        @L["AddNewPatient"]
+    </button>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@L["FirstName"]</th>
+                <th>@L["LastName"]</th>
+                <th>@L["BirthDate"]</th>
+                <th>@L["Actions"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var h in Hasta)
+            {
+                <tr>
+                    <td>@h.Ad</td>
+                    <td>@h.Soyad</td>
+                    <td>@h.DogumTarihi.ToShortDateString()</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" @onclick='() => nav.NavigateTo($"/hasta-duzenle/{h.HastaId}")'>
+                            @L["Edit"]
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => Sil(h.HastaId)">
+                            @L["Delete"]
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<Hasta> Hasta = new();
+
+    protected override void OnInitialized() => Load();
+
+    void Load() => Hasta = db.Hastalar.ToList();
+
+    void Sil(int id)
+    {
+        var h = db.Hastalar.Find(id);
+        if (h != null)
+        {
+            db.Hastalar.Remove(h);
+            db.SaveChanges();
+            Load();
+        }
+    }
+}

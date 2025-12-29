@@ -1,0 +1,98 @@
+﻿@page "/doktor-liste"
+@using SAT242516005.Data
+@using Microsoft.Extensions.Localization
+@using SAT242516005.Localization
+@inject ApplicationDbContext db
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<AppResource> L
+@inject RaporServis rapor
+@inject IJSRuntime JS
+
+<button class="btn btn-danger mb-3" @onclick="PdfIndir">PDF Rapor Al</button>
+
+@code {
+    async Task PdfIndir()
+    {
+        var liste = db.Doktorlar.ToList();
+        var pdfBytes = rapor.DoktorListesiPdfOlustur(liste);
+
+        var base64 = Convert.ToBase64String(pdfBytes);
+        await JS.InvokeVoidAsync("downloadFile", "DoktorListesi.pdf", "application/pdf", base64);
+    }
+}
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        @* Başlık Çevirisi *@
+        <h3>@L["DoktorListesi"]</h3>
+        <button class="btn btn-success" @onclick="@(() => NavigationManager.NavigateTo("/doktor-ekle"))">
+            @L["YeniDoktorEkle"]
+        </button>
+    </div>
+
+    <table class="table table-striped table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                @* Tablo Başlıkları Çevirisi *@
+                <th>@L["Ad"]</th>
+                <th>@L["Soyad"]</th>
+                <th>@L["Brans"]</th>
+                <th style="width: 200px;">@L["Islemler"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (doktorlar == null || !doktorlar.Any())
+            {
+                <tr>
+                    <td colspan="4" class="text-center">@L["KayitliDoktorYok"]</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var d in doktorlar)
+                {
+                    <tr>
+                        <td>@d.Ad</td>
+                        <td>@d.Soyad</td>
+                        <td>@d.Brans</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary me-1" @onclick="@(() => NavigationManager.NavigateTo($"/doktor-duzenle/{d.DoktorId}"))">
+                                @L["Duzenle"]
+                            </button>
+                            <button class="btn btn-sm btn-danger" @onclick="@(() => Delete(d.DoktorId))">
+                                @L["Sil"]
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<Doktor> doktorlar = new();
+
+    protected override void OnInitialized() => LoadData();
+
+    private void LoadData()
+    {
+        try { doktorlar = db.Doktorlar.ToList(); }
+        catch (Exception ex) { Console.WriteLine("Yükleme Hatası: " + ex.Message); }
+    }
+
+    private void Delete(int id)
+    {
+        try
+        {
+            var d = db.Doktorlar.Find(id);
+            if (d != null)
+            {
+                db.Doktorlar.Remove(d);
+                db.SaveChanges();
+                LoadData();
+            }
+        }
+        catch (Exception ex) { Console.WriteLine("Silme Hatası: " + ex.Message); }
+    }
+}

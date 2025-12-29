@@ -1,0 +1,63 @@
+﻿@page "/doktor-ekle"
+@using SAT242516005.Data
+@using Microsoft.Extensions.Localization
+@using Microsoft.EntityFrameworkCore
+@using SAT242516005.Localization
+@inject ApplicationDbContext db
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<AppResource> L
+
+<div class="container mt-3">
+    <h3>@L["YeniDoktorKaydi"]</h3>
+
+    <EditForm Model="doktorModel" OnValidSubmit="AddDoktor">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" />
+
+        <div class="mb-3">
+            <label class="form-label">@L["Ad"]</label>
+            <InputText class="form-control" @bind-Value="doktorModel.Ad" />
+            <ValidationMessage For="@(() => doktorModel.Ad)" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">@L["Soyad"]</label>
+            <InputText class="form-control" @bind-Value="doktorModel.Soyad" />
+            <ValidationMessage For="@(() => doktorModel.Soyad)" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">@L["Brans"]</label>
+            <InputText class="form-control" @bind-Value="doktorModel.Brans" />
+            <ValidationMessage For="@(() => doktorModel.Brans)" />
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary me-2">@L["DoktoruEkle"]</button>
+            <button type="button" class="btn btn-secondary" @onclick="Cancel">@L["Iptal"]</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private Doktor doktorModel = new Doktor();
+
+    private async Task AddDoktor()
+    {
+        try
+        {
+            db.Doktorlar.Add(doktorModel);
+            await db.SaveChangesAsync();
+            NavigationManager.NavigateTo("/doktor-liste");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("HATA: " + ex.Message);
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/doktor-liste");
+    }
+}

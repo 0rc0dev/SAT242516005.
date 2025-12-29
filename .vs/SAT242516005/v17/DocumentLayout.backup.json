@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|solutionrelative:sat242516005\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|solutionrelative:sat242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\components\\pages\\vardiyaliste.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|solutionrelative:sat242516005\\components\\pages\\vardiyaliste.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|solutionrelative:sat242516005\\data\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|solutionrelative:sat242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{393E4839-7A5F-4D56-86A7-C731F10B13D2}|SAT242516005\\SAT242516005.csproj|c:\\users\\orco\\desktop\\okul\\sat242516005\\sat242516005\\components\\pages\\vardiyaduzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -112,7 +116,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -120,7 +124,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "SAT242516005\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T12:43:42.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "VardiyaDuzenle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
@@ -132,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Vardiya.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Models\\Vardiya.cs",
@@ -144,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "tmpD414.tmp.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\AppData\\Local\\Temp\\tmpD414.tmp.razor",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\tmpD414.tmp.razor",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "VardiyaListe.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\VardiyaListe.razor",
@@ -169,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Doktor.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Models\\Doktor.cs",
@@ -181,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Provider.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\Provider.cs",
@@ -194,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "InputTime.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\InputTime.razor",
@@ -206,19 +223,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\appsettings.json",
               "RelativeDocumentMoniker": "SAT242516005\\appsettings.json",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\appsettings.json",
               "RelativeToolTip": "SAT242516005\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-09T14:31:46.033Z"
+              "WhenOpened": "2025-11-09T14:31:46.033Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\MyDbContext.cs",
@@ -231,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "VardiyaEkle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
@@ -243,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "tmpE5E8.tmp.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\AppData\\Local\\Temp\\tmpE5E8.tmp.razor",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\tmpE5E8.tmp.razor",
@@ -255,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\_Imports.razor",
@@ -267,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "HastaEkle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\HastaEkle.razor",
@@ -279,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "HastaDuzenle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
@@ -291,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "DoktorListe.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\DoktorListe.razor",
@@ -303,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DoktorDuzenle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
@@ -315,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DoktorEkle.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\DoktorEkle.razor",
@@ -327,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Hasta.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Models\\Hasta.cs",
@@ -339,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "DbContextExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\DbContextExtensions.cs",
@@ -352,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Program.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Program.cs",
@@ -365,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\UnitOfWork.cs",
@@ -378,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "HastaListe.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\HastaListe.razor",
@@ -390,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\ApplicationUser.cs",
@@ -403,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "SAT242516005\\Data\\ApplicationDbContext.cs",
@@ -416,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Error.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Pages\\Error.razor",
@@ -428,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "SAT242516005\\Components\\Layout\\MainLayout.razor",

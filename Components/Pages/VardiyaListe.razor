@@ -1,0 +1,116 @@
+﻿@page "/vardiya-liste"
+@using SAT242516005.Data
+@using Microsoft.EntityFrameworkCore
+@using SAT242516005.Localization
+@using System.Globalization
+@inject ApplicationDbContext db
+@inject Microsoft.Extensions.Localization.IStringLocalizer<AppResource> L
+
+<div class="container mt-4">
+    <h3 class="mb-4">@L["VardiyaBasligi"]</h3>
+
+    <div class="card p-4 mb-4 shadow-sm border-0 bg-light">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label fw-bold">@L["DoktorListesiNav"]</label>
+                <select class="form-select" @bind="vModel.DoktorId">
+                    <option value="0">-- @L["KayitliDoktorYok"] --</option>
+                    @foreach (var d in doktorlar)
+                    {
+                        <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label fw-bold">@L["Date"]</label>
+                <input type="date" class="form-control"
+                       value="@vModel.Tarih.ToString("yyyy-MM-dd")"
+                       @onchange="@((e) => vModel.Tarih = DateTime.Parse(e.Value.ToString()))" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label fw-bold">@L["BaslangicSaati"]</label>
+                <input type="time" class="form-control"
+                       value="@vModel.BaslangicSaati.ToString(@"hh\:mm")"
+                       @onchange="@((e) => vModel.BaslangicSaati = TimeSpan.Parse(e.Value.ToString()))" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label fw-bold">@L["BitisSaati"]</label>
+                <input type="time" class="form-control"
+                       value="@vModel.BitisSaati.ToString(@"hh\:mm")"
+                       @onchange="@((e) => vModel.BitisSaati = TimeSpan.Parse(e.Value.ToString()))" />
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button class="btn btn-success w-100" @onclick="Kaydet">@L["Save"]</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-hover align-middle bg-white mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>@L["Ad"] @L["Soyad"]</th>
+                    <th>@L["Date"]</th>
+                    <th>@L["Start"] - @L["End"]</th>
+                    <th class="text-center">@L["Actions"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (vardiyalar != null)
+                {
+                    @foreach (var v in vardiyalar)
+                    {
+                        <tr>
+                            <td class="fw-bold">@(v.Doktor?.Ad ?? "...") @v.Doktor?.Soyad</td>
+                            <td>@v.Tarih.ToString("d", CultureInfo.CurrentCulture)</td>
+                            <td>@v.BaslangicSaati.ToString(@"hh\:mm") - @v.BitisSaati.ToString(@"hh\:mm")</td>
+                            <td class="text-center">
+                                <button class="btn btn-outline-danger btn-sm" @onclick="() => Sil(v.VardiyaId)">
+                                    @L["Delete"]
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    List<Vardiya> vardiyalar = new();
+    List<Doktor> doktorlar = new();
+    Vardiya vModel = new()
+    {
+        Tarih = DateTime.Now,
+        BaslangicSaati = new TimeSpan(9, 0, 0),
+        BitisSaati = new TimeSpan(17, 0, 0)
+    };
+
+    protected override async Task OnInitializedAsync() => await Yukle();
+
+    async Task Yukle()
+    {
+        try
+        {
+            doktorlar = await db.Doktorlar.ToListAsync();
+            vardiyalar = await db.Vardiyalar.Include(x => x.Doktor).ToListAsync();
+        }
+        catch { }
+    }
+
+    async Task Kaydet()
+    {
+        if (vModel.DoktorId == 0) return;
+        db.Vardiyalar.Add(vModel);
+        await db.SaveChangesAsync();
+        vModel = new() { Tarih = DateTime.Now, BaslangicSaati = new TimeSpan(9, 0, 0), BitisSaati = new TimeSpan(17, 0, 0) };
+        await Yukle();
+    }
+
+    async Task Sil(int id)
+    {
+        var sil = await db.Vardiyalar.FindAsync(id);
+        if (sil != null) { db.Vardiyalar.Remove(sil); await db.SaveChangesAsync(); await Yukle(); }
+    }
+}

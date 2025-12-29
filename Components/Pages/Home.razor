@@ -1,0 +1,44 @@
+﻿@page "/"
+
+Orçun
+@using SAT242516005.Data
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext db
+@inject IJSRuntime JS
+
+<PageTitle>Sağlık Personeli Vardiya Planlayıcı</PageTitle>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow border-0">
+                <div class="card-header bg-dark text-white text-center">
+                    <h4 class="mb-0">Branşlara Göre Doktor Dağılımı</h4>
+                </div>
+                <div class="card-body" style="height: 450px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var stats = await db.Doktorlar
+                .GroupBy(d => d.Brans)
+                .Select(g => new { Brans = g.Key ?? "Diğer", Count = g.Count() })
+                .ToListAsync();
+
+            if (stats.Any())
+            {
+                var labels = stats.Select(x => x.Brans).ToArray();
+                var counts = stats.Select(x => x.Count).ToArray();
+                await JS.InvokeVoidAsync("setupChart", labels, counts);
+            }
+        }
+    }
+}

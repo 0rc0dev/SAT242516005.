@@ -1,0 +1,40 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.Extensions.Localization
+@using SAT242516005.Localization
+@using Microsoft.AspNetCore.Components.Routing
+@* Hata 1 Çözümü: Localizer'ı tanıtıyoruz *@
+@inject IStringLocalizer<AppResource> L
+@inject NavigationManager MyNavManager
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4 d-flex justify-content-end align-items-center">
+            @* Dil Seçim Alanı *@
+            <div class="language-selector me-3">
+                <a href="/Culture/Set?culture=tr-TR&redirectUri=/@(MyNavManager.ToBaseRelativePath(MyNavManager.Uri))" class="me-2 text-decoration-none">
+                    <img src="https://flagcdn.com/w40/tr.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" title="Türkçe" />
+                </a>
+                <a href="/Culture/Set?culture=en-US&redirectUri=/@(MyNavManager.ToBaseRelativePath(MyNavManager.Uri))" class="text-decoration-none">
+                    <img src="https://flagcdn.com/w40/gb.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" title="English" />
+                </a>
+            </div>
+
+            <a href="https://www.instagram.com/orcunguless/" target="_blank">@L["Hakkinda"]</a>
+            @* Hata 2 Çözümü: Aşağıdaki </div> eksikti, onu ekledik *@
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    Bir hata oluştu.
+    <a href="" class="reload">Yenile</a>
+    <a class="dismiss">🗙</a>
+</div>

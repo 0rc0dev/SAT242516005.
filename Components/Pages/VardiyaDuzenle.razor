@@ -1,0 +1,68 @@
+﻿@page "/vardiya-duzenle/{Id:int}"
+@rendermode InteractiveServer
+@using SAT242516005.Data
+@inject ApplicationDbContext db
+@inject NavigationManager nav
+
+<div class="container mt-3">
+    <h3>Vardiya Düzenle</h3>
+
+    @if (vModel == null)
+    {
+        <div class="alert alert-info">Vardiya bilgileri yükleniyor...</div>
+    }
+    else
+    {
+        <EditForm Model="vModel" OnValidSubmit="Kaydet">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+
+            <div class="mb-3">
+                <label class="form-label">Vardiya Tarihi</label>
+                <InputDate class="form-control" @bind-Value="vModel.Tarih" />
+                <ValidationMessage For="@(() => vModel.Tarih)" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Başlangıç Saati</label>
+                <InputText class="form-control" @bind-Value="vModel.BaslangicSaati" placeholder="Örn: 08:00" />
+                <ValidationMessage For="@(() => vModel.BaslangicSaati)" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Bitiş Saati</label>
+                <InputText class="form-control" @bind-Value="vModel.BitisSaati" placeholder="Örn: 16:00" />
+                <ValidationMessage For="@(() => vModel.BitisSaati)" />
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success me-2">Güncelle</button>
+                <button type="button" class="btn btn-secondary" @onclick="@(() => nav.NavigateTo("/vardiya-liste"))">İptal</button>
+            </div>
+        </EditForm>
+    }
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Vardiya vModel;
+
+    protected override void OnInitialized()
+    {
+
+        vModel = db.Vardiyalar.Find(Id);
+
+
+        if (vModel == null)
+        {
+            nav.NavigateTo("/vardiya-liste");
+        }
+    }
+
+    private void Kaydet()
+    {
+        db.Vardiyalar.Update(vModel);
+        db.SaveChanges();
+        nav.NavigateTo("/vardiya-liste");
+    }
+}

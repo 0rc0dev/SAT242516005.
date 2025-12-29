@@ -1,0 +1,69 @@
+﻿@page "/doktor-duzenle/{Id:int}"
+@using SAT242516005.Data
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext db
+@inject NavigationManager NavigationManager
+
+<div class="container mt-3">
+    <h3>Doktor Bilgilerini Güncelle</h3>
+
+    @if (doktor == null)
+    {
+        <div class="alert alert-warning">Doktor bilgileri yükleniyor...</div>
+    }
+    else
+    {
+        <EditForm Model="doktor" OnValidSubmit="UpdateDoktor">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+
+            <div class="mb-3">
+                <label class="form-label">Ad</label>
+                <InputText class="form-control" @bind-Value="doktor.Ad" />
+                <ValidationMessage For="@(() => doktor.Ad)" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Soyad</label>
+                <InputText class="form-control" @bind-Value="doktor.Soyad" />
+                <ValidationMessage For="@(() => doktor.Soyad)" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Branş</label>
+                <InputText class="form-control" @bind-Value="doktor.Brans" />
+                <ValidationMessage For="@(() => doktor.Brans)" />
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success me-2">Güncelle</button>
+                <button type="button" class="btn btn-secondary" @onclick="Cancel">İptal</button>
+            </div>
+        </EditForm>
+    }
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Doktor doktor;
+
+    protected override void OnParametersSet()
+    {
+        doktor = db.Doktorlar.FirstOrDefault(d => d.DoktorId == Id);
+    }
+
+    private void UpdateDoktor()
+    {
+        if (doktor != null)
+        {
+            db.Doktorlar.Update(doktor);
+            db.SaveChanges();
+            NavigationManager.NavigateTo("/doktor-liste");
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/doktor-liste");
+    }
+}

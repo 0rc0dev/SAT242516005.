@@ -1,0 +1,33 @@
+﻿@using SAT242516005.Localization
+@inject Microsoft.Extensions.Localization.IStringLocalizer<AppResource> L
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">@L["HastaneOtomasyon"]</a>
+    </div>
+</div>
+
+<div class="nav-scrollable">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill"></span> @L["AnaSayfa"]
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/vardiya-liste">
+                <span class="bi bi-calendar-event"></span> @L["VardiyaListesi"]
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/doktor-liste">
+                <span class="bi bi-person-badge"></span> @L["DoktorListesiNav"]
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/hasta-liste">
+                <span class="bi bi-person-heart"></span> @L["PatientList"]
+            </NavLink>
+        </div>
+    </nav>
+</div>

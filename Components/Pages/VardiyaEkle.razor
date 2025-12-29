@@ -1,0 +1,73 @@
+﻿@page "/vardiya-ekle"
+@rendermode InteractiveServer
+@using SAT242516005.Data
+@inject ApplicationDbContext db
+@inject NavigationManager nav
+
+<div class="container mt-3">
+    <h3>Yeni Vardiya Kaydı</h3>
+
+    <EditForm Model="vModel" OnValidSubmit="Kaydet">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" />
+
+        <div class="mb-3">
+            <label class="form-label">Görevli Doktor</label>
+            @* @bind yerine InputSelect kullanmak int ID'ler için daha garantidir *@
+            <InputSelect class="form-control" @bind-Value="vModel.DoktorId">
+                <option value="0">-- Doktor Seçiniz --</option>
+                @foreach (var d in doktorlar)
+                {
+                <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => vModel.DoktorId)" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Vardiya Tarihi</label>
+            <InputDate class="form-control" @bind-Value="vModel.Tarih" />
+            <ValidationMessage For="@(() => vModel.Tarih)" />
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Başlangıç Saati</label>
+                <InputText class="form-control" @bind-Value="vModel.BaslangicSaati" placeholder="09:00" />
+                <ValidationMessage For="@(() => vModel.BaslangicSaati)" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Bitiş Saati</label>
+                <InputText class="form-control" @bind-Value="vModel.BitisSaati" placeholder="17:00" />
+                <ValidationMessage For="@(() => vModel.BitisSaati)" />
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-success">Vardiyayı Kaydet</button>
+            <button type="button" class="btn btn-secondary" @onclick="@(() => nav.NavigateTo(" /vardiya-liste"))">İptal</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private Vardiya vModel = new Vardiya { Tarih = DateTime.Now };
+    private List<Doktor>
+    doktorlar = new();
+
+    protected override void OnInitialized()
+    {
+
+    doktorlar = db.Doktorlar.ToList();
+    }
+
+    private void Kaydet()
+    {
+
+    if (vModel.DoktorId == 0) return;
+
+    db.Vardiyalar.Add(vModel);
+    db.SaveChanges();
+    nav.NavigateTo("/vardiya-liste");
+    }
+    }
