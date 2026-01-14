@@ -1,23 +1,19 @@
-version: '3.4'
+
+# docker build -t sat242516005:latest .
+
+# docker compose up -d
+
+version: "3.9"
 
 services:
-  db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=Sifre123!@#  # Güçlü bir şifre olmalı
+  blazorapp:
+    image: sat242516005:latest
+    build: .
+    container_name: sat242516005
     ports:
-      - "1433:1433"
-
-  web-app:
-    image: hospital-app
-    build:
-      context: .
-      dockerfile: Dockerfile
+      - "8089:8080"
     environment:
-      # Veritabanı adresi olarak container ismi olan 'db'yi veriyoruz
-      - ConnectionStrings__DefaultConnection=Server=db;Database=HastaneDb;User Id=sa;Password=Sifre123!@#;TrustServerCertificate=True
-    ports:
-      - "5000:8080"
-    depends_on:
-      - db
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1445;Database=SAT242516005;User Id=sa;Password=Oo_454545;TrustServerCertificate=True;Encrypt=True;
+      - SITE=SAT242516005
+    restart: unless-stopped

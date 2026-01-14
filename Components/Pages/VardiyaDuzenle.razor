@@ -1,7 +1,7 @@
 ﻿@page "/vardiya-duzenle/{Id:int}"
 @rendermode InteractiveServer
 @using SAT242516005.Data
-@inject ApplicationDbContext db
+@inject MyDbContext db
 @inject NavigationManager nav
 
 <div class="container mt-3">
@@ -9,49 +9,47 @@
 
     @if (vModel == null)
     {
-        <div class="alert alert-info">Vardiya bilgileri yükleniyor...</div>
+    <div class="alert alert-info">Vardiya bilgileri yükleniyor...</div>
     }
     else
     {
-        <EditForm Model="vModel" OnValidSubmit="Kaydet">
-            <DataAnnotationsValidator />
-            <ValidationSummary class="text-danger" />
+    <EditForm Model="vModel" OnValidSubmit="Kaydet">
+        <DataAnnotationsValidator />
+        <ValidationSummary class="text-danger" />
 
-            <div class="mb-3">
-                <label class="form-label">Vardiya Tarihi</label>
-                <InputDate class="form-control" @bind-Value="vModel.Tarih" />
-                <ValidationMessage For="@(() => vModel.Tarih)" />
-            </div>
+        <div class="mb-3">
+            <label class="form-label">Vardiya Tarihi</label>
+            <InputDate class="form-control" @bind-Value="vModel.Tarih" />
+        </div>
 
-            <div class="mb-3">
-                <label class="form-label">Başlangıç Saati</label>
-                <InputText class="form-control" @bind-Value="vModel.BaslangicSaati" placeholder="Örn: 08:00" />
-                <ValidationMessage For="@(() => vModel.BaslangicSaati)" />
-            </div>
+        <div class="mb-3">
+            <label class="form-label">Başlangıç Saati</label>
+            <InputTime class="form-control" @bind-Value="vModel.BaslangicSaati" />
+        </div>
 
-            <div class="mb-3">
-                <label class="form-label">Bitiş Saati</label>
-                <InputText class="form-control" @bind-Value="vModel.BitisSaati" placeholder="Örn: 16:00" />
-                <ValidationMessage For="@(() => vModel.BitisSaati)" />
-            </div>
+        <div class="mb-3">
+            <label class="form-label">Bitiş Saati</label>
+            <InputTime class="form-control" @bind-Value="vModel.BitisSaati" />
+        </div>
 
-            <div class="mt-4">
-                <button type="submit" class="btn btn-success me-2">Güncelle</button>
-                <button type="button" class="btn btn-secondary" @onclick="@(() => nav.NavigateTo("/vardiya-liste"))">İptal</button>
-            </div>
-        </EditForm>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success me-2">Güncelle</button>
+            <button type="button" class="btn btn-secondary"
+                    @onclick="@(() => nav.NavigateTo(" /vardiya-liste"))">
+                İptal
+            </button>
+        </div>
+    </EditForm>
     }
 </div>
 
 @code {
     [Parameter] public int Id { get; set; }
-    private Vardiya vModel;
+    private Vardiya? vModel;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-
-        vModel = db.Vardiyalar.Find(Id);
-
+        vModel = await db.Vardiyalar.FindAsync(Id);
 
         if (vModel == null)
         {
@@ -59,10 +57,10 @@
         }
     }
 
-    private void Kaydet()
+    private async Task Kaydet()
     {
-        db.Vardiyalar.Update(vModel);
-        db.SaveChanges();
+        db.Vardiyalar.Update(vModel!);
+        await db.SaveChangesAsync();
         nav.NavigateTo("/vardiya-liste");
     }
 }

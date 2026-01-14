@@ -1,98 +1,144 @@
 ﻿@page "/doktor-liste"
+
 @using SAT242516005.Data
-@using Microsoft.Extensions.Localization
+@using SAT242516005.Data.Abstract
 @using SAT242516005.Localization
-@inject ApplicationDbContext db
+@using SAT242516005.Models.MyDbModels.Entities
+@using Microsoft.Extensions.Localization
+@using SAT242516005.Services
+@using Radzen
+@using Radzen.Blazor
+
+@inject IMyDbModel_UnitOfWork UnitOfWork
 @inject NavigationManager NavigationManager
 @inject IStringLocalizer<AppResource> L
-@inject RaporServis rapor
 @inject IJSRuntime JS
-
-<button class="btn btn-danger mb-3" @onclick="PdfIndir">PDF Rapor Al</button>
-
-@code {
-    async Task PdfIndir()
-    {
-        var liste = db.Doktorlar.ToList();
-        var pdfBytes = rapor.DoktorListesiPdfOlustur(liste);
-
-        var base64 = Convert.ToBase64String(pdfBytes);
-        await JS.InvokeVoidAsync("downloadFile", "DoktorListesi.pdf", "application/pdf", base64);
-    }
-}
+@inject RaporService rapor
 
 <div class="container mt-3">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        @* Başlık Çevirisi *@
         <h3>@L["DoktorListesi"]</h3>
-        <button class="btn btn-success" @onclick="@(() => NavigationManager.NavigateTo("/doktor-ekle"))">
-            @L["YeniDoktorEkle"]
+        <button class="btn btn-danger" @onclick="PdfIndir">
+            <i class="oi oi-document"></i> PDF Rapor Al
         </button>
     </div>
 
-    <table class="table table-striped table-hover shadow-sm">
-        <thead class="table-dark">
-            <tr>
-                @* Tablo Başlıkları Çevirisi *@
-                <th>@L["Ad"]</th>
-                <th>@L["Soyad"]</th>
-                <th>@L["Brans"]</th>
-                <th style="width: 200px;">@L["Islemler"]</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (doktorlar == null || !doktorlar.Any())
-            {
-                <tr>
-                    <td colspan="4" class="text-center">@L["KayitliDoktorYok"]</td>
-                </tr>
-            }
-            else
-            {
-                @foreach (var d in doktorlar)
-                {
-                    <tr>
-                        <td>@d.Ad</td>
-                        <td>@d.Soyad</td>
-                        <td>@d.Brans</td>
-                        <td>
-                            <button class="btn btn-sm btn-primary me-1" @onclick="@(() => NavigationManager.NavigateTo($"/doktor-duzenle/{d.DoktorId}"))">
-                                @L["Duzenle"]
-                            </button>
-                            <button class="btn btn-sm btn-danger" @onclick="@(() => Delete(d.DoktorId))">
-                                @L["Sil"]
-                            </button>
-                        </td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
+  
+    <div class="card shadow-sm mb-4">
+        <RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" AllowSorting="true" PageSize="5" AllowPaging="true"
+                        PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                        Data="@doktorlar" TItem="Doktor" ColumnWidth="200px" FilterMode="FilterMode.Simple">
+            <Columns>
+                <RadzenDataGridColumn TItem="Doktor" Property="Ad" Title="@L["Ad"]" />
+                <RadzenDataGridColumn TItem="Doktor" Property="Soyad" Title="@L["Soyad"]" />
+                <RadzenDataGridColumn TItem="Doktor" Property="Brans" Title="@L["Brans"]" />
+                <RadzenDataGridColumn TItem="Doktor" Title="@L["Islemler"]" Filterable="false" Sortable="false" Width="180px">
+                    <Template Context="d">
+                        <button class="btn btn-sm btn-primary me-1" @onclick="@(() => DuzenleHazirla(d))">
+                            @L["Duzenle"]
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="@(() => Delete(d.DoktorId))">
+                            @L["Sil"]
+                        </button>
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </div>
+
+    <div class="card shadow-sm border-primary">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">@(seciliDoktor.DoktorId == 0 ? L["YeniDoktorEkle"] : L["Duzenle"])</h5>
+        </div>
+        <div class="card-body">
+            <EditForm Model="@seciliDoktor" OnValidSubmit="Kaydet">
+                <DataAnnotationsValidator />
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">@L["Ad"]</label>
+                        <InputText @bind-Value="seciliDoktor.Ad" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">@L["Soyad"]</label>
+                        <InputText @bind-Value="seciliDoktor.Soyad" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">@L["Brans"]</label>
+                        <InputText @bind-Value="seciliDoktor.Brans" class="form-control" />
+                    </div>
+                    <div class="col-md-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-success w-100">
+                            @L["Kaydet"]
+                        </button>
+                        @if (seciliDoktor.DoktorId != 0)
+                        {
+                            <button type="button" class="btn btn-secondary ms-2" @onclick="FormuTemizle">@L["Iptal"]</button>
+                        }
+                    </div>
+                </div>
+                <ValidationSummary class="mt-2 text-danger" />
+            </EditForm>
+        </div>
+    </div>
 </div>
 
 @code {
     private List<Doktor> doktorlar = new();
+    private Doktor seciliDoktor = new();
 
-    protected override void OnInitialized() => LoadData();
-
-    private void LoadData()
+    protected override async Task OnInitializedAsync()
     {
-        try { doktorlar = db.Doktorlar.ToList(); }
-        catch (Exception ex) { Console.WriteLine("Yükleme Hatası: " + ex.Message); }
+        await VerileriGetir();
     }
 
-    private void Delete(int id)
+    private async Task VerileriGetir()
     {
-        try
+  
+        var liste = await UnitOfWork.Vardiyalar.GetDoktorlarAsync();
+        doktorlar = liste.ToList();
+    }
+
+    private void DuzenleHazirla(Doktor d)
+    {
+  
+        seciliDoktor = d;
+    }
+
+    private async Task Kaydet()
+    {
+        if (seciliDoktor.DoktorId == 0)
         {
-            var d = db.Doktorlar.Find(id);
-            if (d != null)
-            {
-                db.Doktorlar.Remove(d);
-                db.SaveChanges();
-                LoadData();
-            }
+            // YENİ KAYIT: Önce UnitOfWork üzerinden repository'e ekle
+            await UnitOfWork.Vardiyalar.AddDoktorAsync(seciliDoktor);
         }
-        catch (Exception ex) { Console.WriteLine("Silme Hatası: " + ex.Message); }
+        else
+        {
+            // GÜNCELLEME: Mevcut nesneyi update et (EF bunu takip eder)
+            await UnitOfWork.Vardiyalar.UpdateDoktorAsync(seciliDoktor);
+        }
+
+        await UnitOfWork.SaveAsync(); // Şimdi veritabanına fiziksel olarak basar
+        await VerileriGetir();        // Listeyi tazele
+        FormuTemizle();
+    }
+
+    private async Task Delete(int id)
+    {
+        await UnitOfWork.Vardiyalar.DeleteDoktorAsync(id);
+        await UnitOfWork.SaveAsync();
+        await VerileriGetir();
+    }
+
+    private void FormuTemizle()
+    {
+        seciliDoktor = new Doktor();
+    }
+
+    private async Task PdfIndir()
+    {
+       
+        var pdfBytes = rapor.DoktorListesiPdfOlustur(doktorlar);
+        var base64 = Convert.ToBase64String(pdfBytes);
+        await JS.InvokeVoidAsync("downloadFile", "DoktorListesi.pdf", "application/pdf", base64);
     }
 }

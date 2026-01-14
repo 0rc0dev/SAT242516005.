@@ -1,3 +1,13 @@
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.AssemblyReference.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.Localization.AppResource.resources
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.Localization.AppResource.en.resources
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.GenerateResource.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfoInputs.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfo.cs
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.CoreCompileInputs.cache
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\appsettings.json
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\SAT242516005.staticwebassets.runtime.json
@@ -66,6 +76,7 @@ C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\Microsoft.
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\QuestPDF.dll
+C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\Radzen.Blazor.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\SkiaSharp.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\System.CodeDom.dll
@@ -177,16 +188,6 @@ C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\runtimes\w
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.AssemblyReference.cache
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.Localization.AppResource.resources
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.Localization.AppResource.en.resources
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.GenerateResource.cache
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfoInputs.cache
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.AssemblyInfo.cs
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.csproj.CoreCompileInputs.cache
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\en\SAT242516005.resources.dll
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
@@ -206,4 +207,3 @@ C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\refint\SAT
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.pdb
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.genruntimeconfig.cache
 C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\ref\SAT242516005.dll
-C:\Users\Orco\source\repos\SAT242516005\SAT242516005\obj\Debug\net8.0\SAT242516005.sourcelink.json

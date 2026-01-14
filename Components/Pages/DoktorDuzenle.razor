@@ -1,7 +1,11 @@
 ﻿@page "/doktor-duzenle/{Id:int}"
+
 @using SAT242516005.Data
 @using Microsoft.EntityFrameworkCore
-@inject ApplicationDbContext db
+@using SAT242516005.Models.MyDbModels.Entities
+
+
+@inject MyDbContext db
 @inject NavigationManager NavigationManager
 
 <div class="container mt-3">
@@ -20,24 +24,26 @@
             <div class="mb-3">
                 <label class="form-label">Ad</label>
                 <InputText class="form-control" @bind-Value="doktor.Ad" />
-                <ValidationMessage For="@(() => doktor.Ad)" />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Soyad</label>
                 <InputText class="form-control" @bind-Value="doktor.Soyad" />
-                <ValidationMessage For="@(() => doktor.Soyad)" />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Branş</label>
                 <InputText class="form-control" @bind-Value="doktor.Brans" />
-                <ValidationMessage For="@(() => doktor.Brans)" />
             </div>
 
             <div class="mt-4">
-                <button type="submit" class="btn btn-success me-2">Güncelle</button>
-                <button type="button" class="btn btn-secondary" @onclick="Cancel">İptal</button>
+                <button type="submit" class="btn btn-success me-2">
+                    Güncelle
+                </button>
+
+                <button type="button" class="btn btn-secondary" @onclick="Cancel">
+                    İptal
+                </button>
             </div>
         </EditForm>
     }
@@ -45,21 +51,24 @@
 
 @code {
     [Parameter] public int Id { get; set; }
-    private Doktor doktor;
+    private Doktor? doktor;
 
-    protected override void OnParametersSet()
+    protected override async Task OnParametersSetAsync()
     {
-        doktor = db.Doktorlar.FirstOrDefault(d => d.DoktorId == Id);
-    }
+        doktor = await db.Doktorlar
+                         .FirstOrDefaultAsync(d => d.DoktorId == Id);
 
-    private void UpdateDoktor()
-    {
-        if (doktor != null)
+        if (doktor == null)
         {
-            db.Doktorlar.Update(doktor);
-            db.SaveChanges();
             NavigationManager.NavigateTo("/doktor-liste");
         }
+    }
+
+    private async Task UpdateDoktor()
+    {
+        db.Doktorlar.Update(doktor!);
+        await db.SaveChangesAsync();
+        NavigationManager.NavigateTo("/doktor-liste");
     }
 
     private void Cancel()

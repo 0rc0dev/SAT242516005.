@@ -1,10 +1,8 @@
 ﻿@inherits LayoutComponentBase
 @using Microsoft.Extensions.Localization
 @using SAT242516005.Localization
-@using Microsoft.AspNetCore.Components.Routing
-@* Hata 1 Çözümü: Localizer'ı tanıtıyoruz *@
 @inject IStringLocalizer<AppResource> L
-@inject NavigationManager MyNavManager
+@inject IJSRuntime JS
 
 <div class="page">
     <div class="sidebar">
@@ -13,18 +11,18 @@
 
     <main>
         <div class="top-row px-4 d-flex justify-content-end align-items-center">
-            @* Dil Seçim Alanı *@
             <div class="language-selector me-3">
-                <a href="/Culture/Set?culture=tr-TR&redirectUri=/@(MyNavManager.ToBaseRelativePath(MyNavManager.Uri))" class="me-2 text-decoration-none">
-                    <img src="https://flagcdn.com/w40/tr.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" title="Türkçe" />
-                </a>
-                <a href="/Culture/Set?culture=en-US&redirectUri=/@(MyNavManager.ToBaseRelativePath(MyNavManager.Uri))" class="text-decoration-none">
-                    <img src="https://flagcdn.com/w40/gb.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" title="English" />
-                </a>
+                @* Onclick içinde doğrudan JS kodunu tetikliyoruz *@
+                <button type="button" class="btn btn-link p-0 me-2 border-0"
+                        @onclick='() => SetCultureViaJS("tr-TR")'>
+                    <img src="https://flagcdn.com/w40/tr.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" />
+                </button>
+                <button type="button" class="btn btn-link p-0 border-0"
+                        @onclick='() => SetCultureViaJS("en-US")'>
+                    <img src="https://flagcdn.com/w40/gb.png" width="25" style="border:1px solid #ddd; border-radius:3px; cursor:pointer;" />
+                </button>
             </div>
-
             <a href="https://www.instagram.com/orcunguless/" target="_blank">@L["Hakkinda"]</a>
-            @* Hata 2 Çözümü: Aşağıdaki </div> eksikti, onu ekledik *@
         </div>
 
         <article class="content px-4">
@@ -33,8 +31,22 @@
     </main>
 </div>
 
-<div id="blazor-error-ui">
-    Bir hata oluştu.
-    <a href="" class="reload">Yenile</a>
-    <a class="dismiss">🗙</a>
-</div>
+@code {
+    private async Task SetCultureViaJS(string culture)
+    {
+        // lang.js dosyasına ihtiyaç duymadan, doğrudan tarayıcı komutu gönderiyoruz
+        var jsCode = $@"
+            document.cookie = '.AspNetCore.Culture=c={culture}|uic={culture};path=/;Max-Age=31536000;SameSite=Lax';
+            window.location.reload();
+        ";
+
+        try
+        {
+            await JS.InvokeVoidAsync("eval", jsCode);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Hata: " + ex.Message);
+        }
+    }
+}

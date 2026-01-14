@@ -2,34 +2,33 @@
 @using SAT242516005.Data
 @using Microsoft.Extensions.Localization
 @using SAT242516005.Localization
-@inject ApplicationDbContext db
+@inject MyDbContext db
 @inject NavigationManager nav
 @inject IStringLocalizer<AppResource> L
 
 <div class="container mt-3">
-    @* Dil desteği için @L[...] kullandık *@
-    <h3>@L["YeniHastaKaydi"]</h3>
+    <h3>@L["Yeni Hasta Kaydı"]</h3>
 
     <EditForm Model="h" OnValidSubmit="Kaydet">
         <DataAnnotationsValidator />
 
         <div class="mb-3">
-            <label>@L["FirstName"]</label>
+            <label>@L["Ad"]</label>
             <InputText class="form-control" @bind-Value="h.Ad" />
         </div>
 
         <div class="mb-3">
-            <label>@L["LastName"]</label>
+            <label>@L["Soyad"]</label>
             <InputText class="form-control" @bind-Value="h.Soyad" />
         </div>
 
         <div class="mb-3">
-            <label>@L["BirthDate"]</label>
+            <label>@L["Doğum Tarihi"]</label>
             <InputDate class="form-control" @bind-Value="h.DogumTarihi" />
         </div>
 
-        <button type="submit" class="btn btn-primary">@L["Save"]</button>
-        <button type="button" class="btn btn-secondary" @onclick='() => nav.NavigateTo("/hasta-liste")'>@L["Cancel"]</button>
+        <button type="submit" class="btn btn-primary">@L["Kaydet"]</button>
+        <button type="button" class="btn btn-secondary" @onclick='() => nav.NavigateTo("/hasta-liste")'>@L["İptal"]</button>
     </EditForm>
 </div>
 

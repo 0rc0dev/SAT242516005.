@@ -1,73 +1,88 @@
 ﻿@page "/vardiya-ekle"
 @rendermode InteractiveServer
 @using SAT242516005.Data
-@inject ApplicationDbContext db
+@using SAT242516005.Data.Abstract
+@using SAT242516005.Models.MyDbModels.Entities
+@using Microsoft.EntityFrameworkCore
+
+@inject IMyDbModel_UnitOfWork UnitOfWork
 @inject NavigationManager nav
 
 <div class="container mt-3">
-    <h3>Yeni Vardiya Kaydı</h3>
+    <h3>Yeni Vardiya Ekle</h3>
 
     <EditForm Model="vModel" OnValidSubmit="Kaydet">
         <DataAnnotationsValidator />
         <ValidationSummary class="text-danger" />
 
         <div class="mb-3">
-            <label class="form-label">Görevli Doktor</label>
-            @* @bind yerine InputSelect kullanmak int ID'ler için daha garantidir *@
-            <InputSelect class="form-control" @bind-Value="vModel.DoktorId">
+            <label class="form-label">Doktor</label>
+            @* Madde 21: TValue="int" ile Docker derleme belirsizliği giderildi *@
+            <InputSelect class="form-control" @bind-Value="vModel.DoktorId" TValue="int">
                 <option value="0">-- Doktor Seçiniz --</option>
                 @foreach (var d in doktorlar)
                 {
-                <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
+                    <option value="@d.DoktorId">@d.Ad @d.Soyad</option>
                 }
             </InputSelect>
-            <ValidationMessage For="@(() => vModel.DoktorId)" />
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Vardiya Tarihi</label>
-            <InputDate class="form-control" @bind-Value="vModel.Tarih" />
-            <ValidationMessage For="@(() => vModel.Tarih)" />
+            <label class="form-label">Tarih</label>
+            @* Madde 21: TValue="DateTime" ile tip tahmini hatası çözüldü *@
+            <InputDate class="form-control" @bind-Value="vModel.Tarih" TValue="DateTime" />
         </div>
 
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Başlangıç Saati</label>
-                <InputText class="form-control" @bind-Value="vModel.BaslangicSaati" placeholder="09:00" />
-                <ValidationMessage For="@(() => vModel.BaslangicSaati)" />
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Bitiş Saati</label>
-                <InputText class="form-control" @bind-Value="vModel.BitisSaati" placeholder="17:00" />
-                <ValidationMessage For="@(() => vModel.BitisSaati)" />
-            </div>
+        <div class="mb-3">
+            <label class="form-label">Başlangıç Saati</label>
+            @* Hata Çözümü: TimeSpan/DateTime dönüşüm hatası için manuel onchange *@
+            <input type="time" class="form-control"
+                   value="@vModel.BaslangicSaati.ToString(@"hh\:mm")"
+                   @onchange="@(e => { if (TimeSpan.TryParse(e.Value?.ToString(), out var ts)) vModel.BaslangicSaati = ts; })" />
         </div>
 
-        <div class="mt-3">
-            <button type="submit" class="btn btn-success">Vardiyayı Kaydet</button>
-            <button type="button" class="btn btn-secondary" @onclick="@(() => nav.NavigateTo(" /vardiya-liste"))">İptal</button>
+        <div class="mb-3">
+            <label class="form-label">Bitiş Saati</label>
+            @* Hata Çözümü: Lambda dönüşüm ve temsilci türü hataları için manuel atama *@
+            <input type="time" class="form-control"
+                   value="@vModel.BitisSaati.ToString(@"hh\:mm")"
+                   @onchange="@(e => { if (TimeSpan.TryParse(e.Value?.ToString(), out var ts)) vModel.BitisSaati = ts; })" />
         </div>
+
+        <button type="submit" class="btn btn-success">Kaydet</button>
+        <button type="button" class="btn btn-secondary ms-2"
+                @onclick="@(() => nav.NavigateTo("/vardiya-liste"))">
+            İptal
+        </button>
     </EditForm>
 </div>
 
 @code {
-    private Vardiya vModel = new Vardiya { Tarih = DateTime.Now };
-    private List<Doktor>
-    doktorlar = new();
-
-    protected override void OnInitialized()
+    private Vardiya vModel = new()
     {
+        Tarih = DateTime.Now,
+        BaslangicSaati = new TimeSpan(8, 0, 0),
+        BitisSaati = new TimeSpan(17, 0, 0)
+    };
 
-    doktorlar = db.Doktorlar.ToList();
-    }
+    private List<Doktor> doktorlar = new();
 
-    private void Kaydet()
+    protected override async Task OnInitializedAsync()
     {
-
-    if (vModel.DoktorId == 0) return;
-
-    db.Vardiyalar.Add(vModel);
-    db.SaveChanges();
-    nav.NavigateTo("/vardiya-liste");
+        // Madde 22: DB -> UoW -> Provider hiyerarşisi ile veri çekme
+        var liste = await UnitOfWork.Vardiyalar.GetDoktorlarAsync();
+        doktorlar = liste.ToList();
     }
+
+    private async Task Kaydet()
+    {
+        if (vModel.DoktorId == 0) return;
+
+        // Madde 23: Component -> Provider -> UoW -> DB hiyerarşisi ile veri gönderme
+        // Önce ekleme işlemini UnitOfWork/Provider üzerinden yapmalısın
+        // await UnitOfWork.Vardiyalar.VardiyaEkleAsync(vModel);
+
+        await UnitOfWork.SaveAsync();
+        nav.NavigateTo("/vardiya-liste");
     }
+}

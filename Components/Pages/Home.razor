@@ -1,9 +1,7 @@
 ﻿@page "/"
-
-Orçun
+@using SAT242516005.Data.Abstract
 @using SAT242516005.Data
-@using Microsoft.EntityFrameworkCore
-@inject ApplicationDbContext db
+@inject IMyDbModel_UnitOfWork UnitOfWork
 @inject IJSRuntime JS
 
 <PageTitle>Sağlık Personeli Vardiya Planlayıcı</PageTitle>
@@ -28,10 +26,12 @@ Orçun
     {
         if (firstRender)
         {
-            var stats = await db.Doktorlar
+            var doktorlar = await UnitOfWork.Vardiyalar.GetDoktorlarAsync();
+
+            var stats = doktorlar
                 .GroupBy(d => d.Brans)
-                .Select(g => new { Brans = g.Key ?? "Diğer", Count = g.Count() })
-                .ToListAsync();
+                .Select(g => new { Brans = string.IsNullOrEmpty(g.Key) ? "Diğer" : g.Key, Count = g.Count() })
+                .ToList();
 
             if (stats.Any())
             {

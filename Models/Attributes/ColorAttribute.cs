@@ -1,6 +1,15 @@
-namespace SAT242516005.Models.Attributes;
+using System;
 
-public class ColorAttribute(string color) : Attribute
+namespace SAT242516005.Models
 {
-    public string Color { get; set; } = color;
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Class)]
+    public class ColorAttribute : Attribute
+    {
+        public string HexCode { get; }
+
+        public ColorAttribute(string hexCode)
+        {
+            HexCode = hexCode;
+        }
+    }
 }

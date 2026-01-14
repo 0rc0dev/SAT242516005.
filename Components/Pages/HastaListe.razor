@@ -2,7 +2,7 @@
 @using SAT242516005.Data
 @using Microsoft.Extensions.Localization
 @using SAT242516005.Localization
-@inject ApplicationDbContext db
+@inject MyDbContext db
 @inject NavigationManager nav
 @inject IStringLocalizer<AppResource> L
 
@@ -16,7 +16,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>@L["FirstName"]</th>
+                <th>@L["Ad"]</th>
                 <th>@L["LastName"]</th>
                 <th>@L["BirthDate"]</th>
                 <th>@L["Actions"]</th>
