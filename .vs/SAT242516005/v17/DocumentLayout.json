@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\",
+  "WorkspaceRootPath": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -13,99 +13,91 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\AppData\\Local\\Temp\\tmpD414.tmp.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\VardiyaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Vardiya.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\VardiyaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\InputTime.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\VardiyaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\HastaEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\HastaDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\DoktorListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\DoktorDuzenle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\DoktorEkle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\DbContextExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\UnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\HastaListe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Pages\\Error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Components\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -116,7 +108,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -147,14 +139,26 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-02T12:43:42.68Z",
               "EditorCaption": ""
@@ -163,9 +167,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "VardiyaDuzenle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\VardiyaDuzenle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaDuzenle.razor",
               "RelativeToolTip": "Components\\Pages\\VardiyaDuzenle.razor",
               "ViewState": "AgIAAAYAAAAAAAAAAAAvwCoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -176,9 +180,9 @@
               "DocumentIndex": 4,
               "Title": "Vardiya.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs",
-              "RelativeDocumentMoniker": "Models\\Vardiya.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs",
-              "RelativeToolTip": "Models\\Vardiya.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Vardiya.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T14:40:53.484Z"
@@ -199,9 +203,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "VardiyaListe.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\VardiyaListe.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaListe.razor",
               "RelativeToolTip": "Components\\Pages\\VardiyaListe.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -212,9 +216,9 @@
               "DocumentIndex": 6,
               "Title": "Doktor.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs",
-              "RelativeDocumentMoniker": "Models\\Doktor.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs",
-              "RelativeToolTip": "Models\\Doktor.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Doktor.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAswBIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T14:40:29.782Z"
@@ -224,9 +228,9 @@
               "DocumentIndex": 7,
               "Title": "Provider.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs",
-              "RelativeDocumentMoniker": "Data\\Provider.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs",
-              "RelativeToolTip": "Data\\Provider.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\Provider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T15:18:13.818Z"
@@ -236,9 +240,9 @@
               "DocumentIndex": 8,
               "Title": "InputTime.razor",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\InputTime.razor",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor",
-              "RelativeToolTip": "Components\\Pages\\InputTime.razor",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\InputTime.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-09T15:40:42.084Z"
@@ -247,9 +251,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -260,9 +264,9 @@
               "DocumentIndex": 10,
               "Title": "MyDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs",
-              "RelativeToolTip": "Data\\MyDbContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\MyDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T15:43:44.425Z"
@@ -271,9 +275,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "VardiyaEkle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\VardiyaEkle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\VardiyaEkle.razor",
               "RelativeToolTip": "Components\\Pages\\VardiyaEkle.razor",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -295,9 +299,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\_Imports.razor",
               "RelativeToolTip": "Components\\_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -307,9 +311,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "HastaEkle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\HastaEkle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaEkle.razor",
               "RelativeToolTip": "Components\\Pages\\HastaEkle.razor",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -319,9 +323,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "HastaDuzenle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\HastaDuzenle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaDuzenle.razor",
               "RelativeToolTip": "Components\\Pages\\HastaDuzenle.razor",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -331,9 +335,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "DoktorListe.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\DoktorListe.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorListe.razor",
               "RelativeToolTip": "Components\\Pages\\DoktorListe.razor",
               "ViewState": "AgIAAA8AAAAAAAAAAAAiwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -343,9 +347,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "DoktorDuzenle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\DoktorDuzenle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorDuzenle.razor",
               "RelativeToolTip": "Components\\Pages\\DoktorDuzenle.razor",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -355,9 +359,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "DoktorEkle.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\DoktorEkle.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\DoktorEkle.razor",
               "RelativeToolTip": "Components\\Pages\\DoktorEkle.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -368,9 +372,9 @@
               "DocumentIndex": 18,
               "Title": "Hasta.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs",
-              "RelativeDocumentMoniker": "Models\\Hasta.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs",
-              "RelativeToolTip": "Models\\Hasta.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Models\\Hasta.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T14:40:47.795Z"
@@ -380,9 +384,9 @@
               "DocumentIndex": 19,
               "Title": "DbContextExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs",
-              "RelativeDocumentMoniker": "Data\\DbContextExtensions.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs",
-              "RelativeToolTip": "Data\\DbContextExtensions.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\DbContextExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T15:18:44.808Z"
@@ -391,9 +395,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Program.cs",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -404,9 +408,9 @@
               "DocumentIndex": 21,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Data\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs",
               "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs",
-              "RelativeToolTip": "Data\\UnitOfWork.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\UnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T15:18:57.229Z"
@@ -415,9 +419,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "HastaListe.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\HastaListe.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\HastaListe.razor",
               "RelativeToolTip": "Components\\Pages\\HastaListe.razor",
               "ViewState": "AgIAAAkAAAAAAAAAAAAiwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -427,9 +431,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationUser.cs",
               "RelativeToolTip": "Data\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -439,9 +443,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -451,9 +455,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "Error.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Pages\\Error.razor",
               "RelativeToolTip": "Components\\Pages\\Error.razor",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -463,9 +467,9 @@
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Orco\\Desktop\\Okul\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Orco\\source\\repos\\SAT242516005\\SAT242516005\\Components\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
